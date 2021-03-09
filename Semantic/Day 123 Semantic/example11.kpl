@@ -1,0 +1,14 @@
+Program Example1; (* Example 1 *)
+Const a = 3.14;
+Type I = FLOAT;
+VAR A : I;
+FUNCTION F(X : FLOAT) : FLOAT;
+Begin 
+End;
+Begin
+b += 1;
+c -= 2;
+d *= 3;
+e /= 4;
+f := 3 % 4;
+End. (* Example 1 *)

@@ -1,0 +1,8 @@
+Program midterm;
+Const pi = 3.1416;
+Type t = Float;
+Var f: t;
+	r: t;
+Begin 
+	f += 2*r*pi;
+End.

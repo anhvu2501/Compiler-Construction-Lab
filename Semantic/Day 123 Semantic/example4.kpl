@@ -1,0 +1,54 @@
+PROGRAM  EXAMPLE4;  (* Example 4 *)
+CONST MAX = 10;
+TYPE T = INTEGER;
+VAR  A : ARRAY(. 10 .) OF T;
+     N : INTEGER;
+     CH : CHAR;
+     F : FLOAT;
+
+PROCEDURE INPUT;
+VAR TMP : INTEGER;
+    I : INTEGER;
+    F : FLOAT;
+BEGIN
+  N := READI;
+  FOR I := 1 TO N DO
+     A(.I.) := READI;
+END;
+
+PROCEDURE OUTPUT;
+VAR I : INTEGER;
+    F : FLOAT;
+BEGIN
+  FOR I := 1 TO N DO
+     BEGIN
+       CALL WRITEI(A(.I.));
+       CALL WRITEF(F);
+       CALL WRITELN;
+     END
+END;
+
+FUNCTION SUM (X : FLOAT) : INTEGER;
+VAR I: INTEGER;
+    S : INTEGER;
+    F : FLOAT;
+BEGIN
+    S := 0;
+    I += 1;
+    WHILE I <= N DO
+     BEGIN
+       S := S + A(.I.);
+       I += 1;
+     END
+END;
+
+BEGIN
+   CH := 'y';
+   WHILE CH = 'y' DO
+     BEGIN
+       CALL INPUT;
+       CALL OUTPUT;
+       CALL WRITEI(SUM(3.14));
+       CH := READC;
+     END
+END.  (* Example 4 *)
